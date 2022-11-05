@@ -3,11 +3,9 @@
 namespace App\Api\v1\Explosion\Controllers;
 
 use App\Api\v1\Explosion\Requests\CalculateExplosionRequest;
-use App\Domain\Explosion\Repositories\ExplosionClassificationRepository;
 use App\Domain\Explosion\Services\ExplosionClassificationService;
 use App\Domain\Explosion\Services\ExplosionExampleService;
 use App\Domain\Explosion\Services\ExplosionService;
-use Database\Seeders\ExplosionExampleSeeder;
 use Illuminate\Routing\Controller as BaseController;
 
 class ExplosionController extends BaseController
