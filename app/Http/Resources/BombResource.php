@@ -15,8 +15,8 @@ class BombResource extends JsonResource
         return [
             'yield' => $this->yield,
             'materialReacted' => $this->materialReacted,
-            'suggestions' => $this->suggestions,
             'explanations' => $this->explanations,
+            'suggestions' => $this->suggestions,
             'examplesList' => $this->examplesList,
             'additionalParameters' => $this->additionalParameters,
         ];

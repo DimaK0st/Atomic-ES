@@ -17,8 +17,9 @@ class CalculatePowerTask
     {
         $progressionConstant = '';
         $generationTime = '';
-        $atomsAmount = $bombCalcModel->numberOfNeutrons;
+        $numberOfNeutrons = $bombCalcModel->numberOfNeutrons;
         $timeSpent = 0;
+        $atomsAmount = 0;
 
         if ($bombCalcModel->coreMaterial == Constants::$CORE_MATERIAL['Uranium']) {
             $progressionConstant = Constants::$URANIUM_PROGRESSION_KOEF;

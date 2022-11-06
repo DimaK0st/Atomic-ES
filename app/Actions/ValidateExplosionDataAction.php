@@ -19,12 +19,15 @@ class ValidateExplosionDataAction
             if ($explosionDTO->purity < Constants::$PLUTONIUM_MINIMAL_PURITY) {
                 return 'Too bad plutonium';
             }
+            if ($explosionDTO->amountMaterial < abs($this->calculatePurityTask->run($explosionDTO->coreMaterial, $explosionDTO->temperMaterial, $explosionDTO->purity))) {
+                return 'Too little material to kaboom';
+            }
         }
         if ($explosionDTO->coreMaterial == Constants::$CORE_MATERIAL['Uranium']) {
             if ($explosionDTO->purity < Constants::$URANIUM_MINIMAL_PURITY) {
                 return 'Too bad uranium';
             }
-            if ($explosionDTO->amountMaterial < $this->calculatePurityTask->run($explosionDTO->coreMaterial, $explosionDTO->temperMaterial, $explosionDTO->purity)) {
+            if ($explosionDTO->amountMaterial < abs($this->calculatePurityTask->run($explosionDTO->coreMaterial, $explosionDTO->temperMaterial, $explosionDTO->purity))) {
                 return 'Too little material to kaboom';
             }
         }
