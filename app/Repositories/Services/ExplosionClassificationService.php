@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Domain\Explosion\Services;
+namespace App\Repositories\Services;
 
-use App\Domain\Explosion\Repositories\ExplosionClassificationRepository;
 use App\Models\ExplosionClassification;
-use Illuminate\Database\Eloquent\Model;
+use App\Repositories\ExplosionClassificationRepository;
 
 class ExplosionClassificationService
 {

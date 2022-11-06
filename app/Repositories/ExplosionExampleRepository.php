@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Explosion\Repositories;
+namespace App\Repositories;
 
 use App\Models\ExplosionClassification;
 use App\Models\ExplosionExample;

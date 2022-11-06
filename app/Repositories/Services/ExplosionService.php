@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Explosion\Services;
+namespace App\Repositories\Services;
 
 use App\Api\v1\Explosion\Requests\CalculateExplosionRequest;
 

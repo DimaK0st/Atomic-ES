@@ -1,7 +1,6 @@
 <?php
 
-use App\Api\v1\Explosion\Controllers\ExplosionController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Explosion\ExplosionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::group(['prefix'=>'v1'], function () {
-
-    Route::post('/calculate', [ExplosionController::class, 'calculateExplosion']);
-
+Route::group(['prefix' => 'v1'], function () {
+    Route::get('/calculate', [ExplosionController::class, 'calculateExplosion']);
 });

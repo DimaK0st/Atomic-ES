@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Domain\Explosion\Services;
+namespace App\Repositories\Services;
 
-use App\Domain\Explosion\Repositories\ExplosionExampleRepository;
 use App\Models\ExplosionClassification;
+use App\Repositories\ExplosionExampleRepository;
 
 class ExplosionExampleService
 {
 
-    public function __construct(private ExplosionExampleRepository $exampleRepository)
+    public function __construct(private readonly ExplosionExampleRepository $exampleRepository)
     {
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Explosion\Repositories;
+namespace App\Repositories;
 
 use App\Models\ExplosionClassification;
 use Illuminate\Database\Eloquent\Builder;
@@ -10,9 +10,9 @@ class ExplosionClassificationRepository
 {
     /**
      * @param float $kiloTon
-     * @return ExplosionClassification|null
+     * @return object|Builder|Model
      */
-    public function getClassificationByKiloTon(float $kiloTon): ?ExplosionClassification
+    public function getClassificationByKiloTon(float $kiloTon)
     {
         return $this->query()
             ->where('min_power','<', $kiloTon)
