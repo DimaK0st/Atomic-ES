@@ -11,11 +11,11 @@ class BombCalcModel
     public string $coreMaterial;
     public string $temperMaterial;
     public int $numberOfNeutrons;
-    public int $yield;
+    public float $yield;
     public float $materialReacted;
     public string $suggestions;
     public string $explanations;
-    public array $examplesList; //TODO DIMON
+    public array $examplesList = []; //TODO DIMON
     public array $additionalParameters = [ //TODO DIMON
         'diameter' => '',
         'maxLight' => '',

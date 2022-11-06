@@ -17,8 +17,9 @@ class CalculatePowerTask
     {
         $progressionConstant = '';
         $generationTime = '';
-        $atomsAmount = $bombCalcModel->numberOfNeutrons;
+        $numberOfNeutrons = $bombCalcModel->numberOfNeutrons;
         $timeSpent = 0;
+        $atomsAmount = 0;
 
         if ($bombCalcModel->coreMaterial == Constants::$CORE_MATERIAL['Uranium']) {
             $progressionConstant = Constants::$URANIUM_PROGRESSION_KOEF;
@@ -32,8 +33,8 @@ class CalculatePowerTask
             $atomsAmount += $progressionConstant * $atomsAmount;
             $timeSpent += $generationTime;
         }
-
-        $bombCalcModel->materialReacted = $this->getMassFromAtomsTask->run($atomsAmount, $bombCalcModel->coreMaterial);
+        $materialReacted = $this->getMassFromAtomsTask->run($atomsAmount, $bombCalcModel->coreMaterial);
+        $bombCalcModel->materialReacted = min($materialReacted, $bombCalcModel->amountMaterial * 1000);
         $bombCalcModel->yield = $bombCalcModel->materialReacted * Constants::$ONE_GRAM_POWER;
         return $bombCalcModel;
     }
