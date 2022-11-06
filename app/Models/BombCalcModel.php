@@ -23,6 +23,8 @@ class BombCalcModel
         'mushroomHeight' => '',
         'cloudHeight' => '',
         'cloudDiameter' => '',
+        'fireImg' => '',
+        'nuclearImg' => '',
     ];
 
     /**
@@ -55,6 +57,8 @@ class BombCalcModel
         $this->additionalParameters['mushroomHeight'] = $model->mushroom_height;
         $this->additionalParameters['cloudHeight'] = $model->cloud_height;
         $this->additionalParameters['cloudDiameter'] = $model->cloud_diameter;
+        $this->additionalParameters['fireImg'] = asset('images/' . $model->fire_cloud_img);
+        $this->additionalParameters['nuclearImg'] = asset('images/' . $model->nuclear_cloud_img);
     }
 
 

@@ -15,6 +15,8 @@ class GetDatabaseDataAction
 
     public function run(BombCalcModel $bombCalcModel)
     {
+        $bombCalcModel->yield = rand(1,10000);
+
         if (!$explosionClassification = $this->explosionClassificationTask->run($bombCalcModel->yield)) {
             return null;
         }
