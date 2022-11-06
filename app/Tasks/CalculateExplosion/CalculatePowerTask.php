@@ -35,8 +35,8 @@ class CalculatePowerTask
             $numberOfNeutrons *= $progressionConstant;
             $timeSpent += $generationTime;
         }
-
-        $bombCalcModel->materialReacted = $this->getMassFromAtomsTask->run((int)$atomsAmount, $bombCalcModel->coreMaterial);
+        $materialReacted = $this->getMassFromAtomsTask->run($atomsAmount, $bombCalcModel->coreMaterial);
+        $bombCalcModel->materialReacted = min($materialReacted, $bombCalcModel->amountMaterial * 1000);
         $bombCalcModel->yield = $bombCalcModel->materialReacted * Constants::$ONE_GRAM_POWER;
         return $bombCalcModel;
     }

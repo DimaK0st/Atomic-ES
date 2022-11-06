@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\ExplosionExample;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ExplosionExampleSeeder extends Seeder
@@ -25,6 +24,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'July 16, 1945',
                 'test_type' => 'Atmospheric',
                 'power'     =>  25,
+                'url' => 'Trinity.jpg',
             ],
             [
                 'operation' => 'Manhattan Project',
@@ -35,6 +35,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => '6 August 1945',
                 'test_type' => 'Atmospheric',
                 'power'     =>  15,
+                'url' => 'Little_Boy.jpg',
             ],
             [
                 'operation' => 'Manhattan Project',
@@ -45,6 +46,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => '9 August 1945',
                 'test_type' => 'Atmospheric',
                 'power'     =>  21,
+                'url' => 'Fat_Man.jpg',
             ],
             [
                 'operation' => 'Crossroads',
@@ -55,6 +57,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'June 30, 1946     ',
                 'test_type' => 'Atmospheric',
                 'power'     =>  22,
+                'url' => 'Crossroads_Able.jpg',
             ],
             [
                 'operation' => 'Crossroads',
@@ -65,6 +68,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'July 24, 1946',
                 'test_type' => 'Underwater',
                 'power'     =>  23,
+                'url' => 'Crossroads_Baker.jpg',
             ],
             [
                 'operation' => 'Sandstone',
@@ -75,6 +79,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 14, 1948',
                 'test_type' => 'Atmospheric',
                 'power'     =>  37,
+                'url' => 'Sandstone_X-ray.png',
             ],
             [
                 'operation' => 'Sandstone',
@@ -85,6 +90,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 30, 1948',
                 'test_type' => 'Atmospheric',
                 'power'     =>  49,
+                'url' => 'Sandstone_Yoke.jpg',
             ],
             [
                 'operation' => 'Sandstone',
@@ -95,6 +101,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 14, 1948',
                 'test_type' => 'Atmospheric',
                 'power'     =>  18,
+                'url' => 'Sandstone_Zebra.jpg',
             ],
             [
                 'operation' => 'Ranger',
@@ -105,6 +112,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'January 27, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  1,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Ranger',
@@ -115,6 +123,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'January 28, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  8,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Ranger',
@@ -125,6 +134,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'February 1, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  1,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Ranger',
@@ -135,6 +145,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'February 2, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  8,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Ranger',
@@ -145,6 +156,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'February 6, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  22,
+                'url' => 'Ranger_Fox.jpg',
             ],
             [
                 'operation' => 'Greenhouse',
@@ -155,6 +167,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 7, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  81,
+                'url' => 'Greenhouse_Dog.jpg',
             ],
             [
                 'operation' => 'Greenhouse',
@@ -165,6 +178,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 20, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  47,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Greenhouse',
@@ -175,6 +189,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 8, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  225,
+                'url' => 'Greenhouse_George.jpg',
             ],
             [
                 'operation' => 'Greenhouse',
@@ -185,6 +200,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 24, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  45.5,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Buster–Jangle',
@@ -195,6 +211,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'October 22, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  0,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Buster–Jangle',
@@ -205,6 +222,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'October 28, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  3.5,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Buster–Jangle',
@@ -215,6 +233,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'October 30, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  14,
+                'url' => 'Buster_Charlie.jpg',
             ],
             [
                 'operation' => 'Buster–Jangle',
@@ -225,6 +244,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'November 1, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  21,
+                'url' => 'Buster_Dog.jpg',
             ],
             [
                 'operation' => 'Buster–Jangle',
@@ -235,6 +255,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'November 5, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  31,
+                'url' => 'Buster_Easy.jpg',
             ],
             [
                 'operation' => 'Buster–Jangle',
@@ -245,6 +266,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'November 19, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  1.2,
+                'url' => 'Jangle_Sugar.jpg',
             ],
             [
                 'operation' => 'Buster–Jangle',
@@ -255,6 +277,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'November 29, 1951',
                 'test_type' => 'Atmospheric',
                 'power'     =>  1.2,
+                'url' => 'Jangle_Uncle.jpg',
             ],
             [
                 'operation' => 'Tumbler–Snapper',
@@ -265,6 +288,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 1, 1952',
                 'test_type' => 'Atmospheric',
                 'power'     =>  1,
+                'url' => 'Tumbler_Able.jpg',
             ],
             [
                 'operation' => 'Tumbler–Snapper',
@@ -275,6 +299,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 15, 1952',
                 'test_type' => 'Atmospheric',
                 'power'     =>  1,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Tumbler–Snapper',
@@ -285,6 +310,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 22, 1952',
                 'test_type' => 'Atmospheric',
                 'power'     =>  31,
+                'url' => 'Tumbler_Charlie.jpg',
             ],
             [
                 'operation' => 'Tumbler–Snapper',
@@ -295,6 +321,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 1, 1952',
                 'test_type' => 'Atmospheric',
                 'power'     =>  19,
+                'url' => 'Snapper_Dog.jpg',
             ],
             [
                 'operation' => 'Tumbler–Snapper',
@@ -305,6 +332,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 7, 1952',
                 'test_type' => 'Atmospheric',
                 'power'     =>  12,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Tumbler–Snapper',
@@ -315,6 +343,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 25, 1952',
                 'test_type' => 'Atmospheric',
                 'power'     =>  11,
+                'url' => 'Snapper_Fox.jpg',
             ],
             [
                 'operation' => 'Tumbler–Snapper',
@@ -325,6 +354,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'June 1, 1952',
                 'test_type' => 'Atmospheric',
                 'power'     =>  15,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Tumbler–Snapper',
@@ -335,6 +365,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'June 5, 1952',
                 'test_type' => 'Atmospheric',
                 'power'     =>  14,
+                'url' => 'Snapper_How.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -345,6 +376,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'March 17, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  16,
+                'url' => 'Upshot–Knothole_Annie.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -355,6 +387,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'March 24, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  24,
+                'url' => 'Upshot–Knothole_Nancy.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -365,6 +398,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'March 31, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  0.2,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -375,6 +409,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 6, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  11,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -385,6 +420,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 11, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  0.22,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -395,6 +431,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 18, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  23,
+                'url' => 'Upshot–Knothole_Badger.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -405,6 +442,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 25, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  43,
+                'url' => 'Upshot–Knothole_Simon.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -415,6 +453,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 8, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  27,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -425,6 +464,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 19, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  32,
+                'url' => 'Upshot–Knothole_Harry.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -435,6 +475,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 25, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  15,
+                'url' => 'Upshot–Knothole_Grable.jpg',
             ],
             [
                 'operation' => 'Upshot–Knothole',
@@ -445,6 +486,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'June 4, 1953',
                 'test_type' => 'Atmospheric',
                 'power'     =>  61,
+                'url' => 'Upshot–Knothole_Climax.jpg',
             ],
             [
                 'operation' => 'Ivy',
@@ -455,6 +497,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'October 31, 1952',
                 'test_type' => 'Atmospheric',
                 'power'     =>  10400,
+                'url' => 'Ivy_Mike.jpg',
             ],
             [
                 'operation' => 'Ivy',
@@ -465,6 +508,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'November 15, 1952',
                 'test_type' => 'Atmospheric',
                 'power'     =>  540,
+                'url' => 'Ivy_King.jpg',
             ],
             [
                 'operation' => 'Castle',
@@ -475,6 +519,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'February 28, 1954',
                 'test_type' => 'Atmospheric',
                 'power'     =>  15000,
+                'url' => 'Castle_Bravo.jpg',
             ],
             [
                 'operation' => 'Castle',
@@ -485,6 +530,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'March 26, 1954',
                 'test_type' => 'Atmospheric',
                 'power'     =>  11000,
+                'url' => 'Castle_Romeo.jpg',
             ],
             [
                 'operation' => 'Castle',
@@ -495,6 +541,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 6, 1954',
                 'test_type' => 'Atmospheric',
                 'power'     =>  110,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Castle',
@@ -505,6 +552,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'April 25, 1954',
                 'test_type' => 'Atmospheric',
                 'power'     =>  69000,
+                'url' => 'Castle_Union.jpg',
             ],
             [
                 'operation' => 'Castle',
@@ -515,6 +563,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 4, 1954',
                 'test_type' => 'Atmospheric',
                 'power'     =>  13500,
+                'url' => 'default.jpg',
             ],
             [
                 'operation' => 'Castle',
@@ -525,6 +574,7 @@ class ExplosionExampleSeeder extends Seeder
                 'date'      => 'May 13, 1954',
                 'test_type' => 'Atmospheric',
                 'power'     =>  1700,
+                'url' => 'default.jpg',
             ],
         ];
 

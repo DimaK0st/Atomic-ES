@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $date
  * @property string $test_type
  * @property float $power
+ * @property string $url
  */
 class ExplosionExample extends Model
 {
@@ -28,5 +29,6 @@ class ExplosionExample extends Model
         'country',
         'test_site',
         'power',
+        'url',
     ];
 }

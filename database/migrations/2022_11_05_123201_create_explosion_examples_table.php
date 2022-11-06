@@ -22,6 +22,7 @@ return new class extends Migration {
             $table->string('date');
             $table->string('test_type');
             $table->float('power');
+            $table->string('url')->default('default.jpg');
         });
     }
 
