@@ -32,7 +32,6 @@ class ExplosionController extends BaseController
         if(!$bombCalcModel = $getDatabaseDataAction->run($bombCalcModel)){
             return 'Classification not found';
         }
-        dd($bombCalcModel);
 
         return BombResource::make($bombCalcModel);
     }
