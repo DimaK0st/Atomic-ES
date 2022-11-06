@@ -29,8 +29,10 @@ class CalculatePowerTask
             $progressionConstant = Constants::$PLUTONIUM_PROGRESSION_KOEF;
             $generationTime = Constants::$PLUTONIUM_GENERATION_TIME;
         }
+
         while ($timeSpent < Constants::$CORE_STABILITY_THRESHOLD) {
-            $atomsAmount += $progressionConstant * $atomsAmount;
+            $atomsAmount += $numberOfNeutrons;
+            $numberOfNeutrons *= $progressionConstant;
             $timeSpent += $generationTime;
         }
         $materialReacted = $this->getMassFromAtomsTask->run($atomsAmount, $bombCalcModel->coreMaterial);
