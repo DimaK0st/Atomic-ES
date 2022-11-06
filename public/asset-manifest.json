@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.191b935b.css",
+    "main.js": "/static/js/main.c5cf3178.js",
+    "static/media/background.mp4": "/static/media/background.79920a2a52b6d51e55cc.mp4",
+    "static/media/GRIB_2.png": "/static/media/GRIB_2.f621d826de35d3403307.png",
+    "static/media/GRIB_3.png": "/static/media/GRIB_3.1dbb2396f44a5f1f9bb3.png",
+    "static/media/VOGN_CLOUD_4.png": "/static/media/VOGN_CLOUD_4.da4f6dd0512d4adc23a1.png",
+    "static/media/VOGN_CLOUD_3.png": "/static/media/VOGN_CLOUD_3.ff1417da08eb7289eff7.png",
+    "static/media/GRIB_4.png": "/static/media/GRIB_4.b01987bc62079fb4d0c5.png",
+    "static/media/VOGN_CLOUD_1.png": "/static/media/VOGN_CLOUD_1.e9e189ef8f55cd47c792.png",
+    "static/media/VOGN_CLOUD_5.png": "/static/media/VOGN_CLOUD_5.1593827b339a649e3168.png",
+    "static/media/GRIB_5.png": "/static/media/GRIB_5.443a01e72193e00c7f1d.png",
+    "static/media/VOGN_CLOUD_2.png": "/static/media/VOGN_CLOUD_2.add890b706fe1255e29b.png",
+    "static/media/GRIB_1.png": "/static/media/GRIB_1.a5a16b50934d30974fac.png",
+    "static/media/explosion.png": "/static/media/explosion.07950313eb342b18e286.png",
+    "static/media/calculation.png": "/static/media/calculation.3415f3333f9084c45d94.png",
+    "index.html": "/index.html",
+    "main.191b935b.css.map": "/static/css/main.191b935b.css.map",
+    "main.c5cf3178.js.map": "/static/js/main.c5cf3178.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.191b935b.css",
+    "static/js/main.c5cf3178.js"
+  ]
+}
