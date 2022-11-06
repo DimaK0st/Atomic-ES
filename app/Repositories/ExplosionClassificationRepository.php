@@ -10,9 +10,9 @@ class ExplosionClassificationRepository
 {
     /**
      * @param float $kiloTon
-     * @return object|Builder|Model
+     * @return ExplosionClassification|null
      */
-    public function getClassificationByKiloTon(float $kiloTon)
+    public function getClassificationByKiloTon(float $kiloTon): ExplosionClassification|null
     {
         return $this->query()
             ->where('min_power','<', $kiloTon)

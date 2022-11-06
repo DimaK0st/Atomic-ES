@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Builder;
 
 class ExplosionExampleRepository
 {
-    public function getExamplesByClassification(ExplosionClassification $classification)
+    public function getExamplesByClassification(int $minPower, int $maxPower): array
     {
         return $this->query()
-            ->where('power','<', $classification->max_power)
-            ->where('power','>=', $classification->min_power)
+            ->where('power','>=', $minPower)
+            ->where('power','<', $maxPower)
             ->orderBy('power')
             ->get()->toArray();
     }

@@ -33,7 +33,7 @@ class CalculatePowerTask
             $timeSpent += $generationTime;
         }
 
-        $bombCalcModel->materialReacted = $this->getMassFromAtomsTask->run($atomsAmount, $bombCalcModel->coreMaterial);
+        $bombCalcModel->materialReacted = $this->getMassFromAtomsTask->run((int)$atomsAmount, $bombCalcModel->coreMaterial);
         $bombCalcModel->yield = $bombCalcModel->materialReacted * Constants::$ONE_GRAM_POWER;
         return $bombCalcModel;
     }

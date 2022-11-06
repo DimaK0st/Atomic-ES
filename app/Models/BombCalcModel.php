@@ -11,12 +11,12 @@ class BombCalcModel
     public string $coreMaterial;
     public string $temperMaterial;
     public int $numberOfNeutrons;
-    public int $yield;
+    public float $yield;
     public float $materialReacted;
     public string $suggestions;
     public string $explanations;
-    public array $examplesList; //TODO DIMON
-    public array $additionalParameters = [ //TODO DIMON
+    public array $examplesList = [];
+    public array $additionalParameters = [
         'diameter' => '',
         'maxLight' => '',
         'timeLit' => '',
@@ -46,14 +46,15 @@ class BombCalcModel
      * @param float $cloudDiameter
      * @return void
      *///TODO DIMON
-    public function setAdditionalParameters(float $diameter, float $maxLight, float $timeLit, float $mushroomHeights, float $cloudHeight, float $cloudDiameter): void
+//    public function setAdditionalParameters(float $diameter, float $maxLight, float $timeLit, float $mushroomHeights, float $cloudHeight, float $cloudDiameter): void
+    public function setAdditionalParameters(ExplosionClassification $model): void
     {
-        $this->additionalParameters['diameter'] = $diameter;
-        $this->additionalParameters['maxLight'] = $maxLight;
-        $this->additionalParameters['timeLit'] = $timeLit;
-        $this->additionalParameters['mushroomHeight'] = $mushroomHeights;
-        $this->additionalParameters['cloudHeight'] = $cloudHeight;
-        $this->additionalParameters['cloudDiameter'] = $cloudDiameter;
+        $this->additionalParameters['diameter'] = $model->cloud_diameter;
+        $this->additionalParameters['maxLight'] = $model->glow_max;
+        $this->additionalParameters['timeLit'] = $model->glow_time;
+        $this->additionalParameters['mushroomHeight'] = $model->mushroom_height;
+        $this->additionalParameters['cloudHeight'] = $model->cloud_height;
+        $this->additionalParameters['cloudDiameter'] = $model->cloud_diameter;
     }
 
 
