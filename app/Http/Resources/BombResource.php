@@ -13,8 +13,8 @@ class BombResource extends JsonResource
     public function toArray($request): array
     {
         return [
-            'yield' => $this->yield,
-            'materialReacted' => $this->materialReacted,
+            'yield' => number_format($this->yield, 2),
+            'materialReacted' => number_format($this->materialReacted, 2),
             'explanations' => $this->explanations,
             'suggestions' => $this->suggestions,
             'examplesList' => $this->examplesList,
