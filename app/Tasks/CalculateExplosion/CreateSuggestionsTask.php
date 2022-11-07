@@ -19,18 +19,21 @@ class CreateSuggestionsTask
         $word2 = $bombCalcModel->coreMaterial == Constants::$CORE_MATERIAL['Uranium'] ? 'уранову' : 'плутонієву';
 
         $suggestions = 'Як покращити ККД своєї бомби?<br>';
-        $suggestions .= 'Попершу, у вашій бомбі зреагувало ';
-        if ($percentageExploded < 30) {
-            $suggestions .= 'лише ';
-        }
-        if ($percentageExploded < 10) {
-            $suggestions .= 'тільки ';
-        }
+
         if ($percentageExploded < 80) {
+            $suggestions .= 'Попершу, у вашій бомбі зреагувало ';
+            if ($percentageExploded < 30 && $percentageExploded > 10) {
+                $suggestions .= 'лише ';
+            }
+            if ($percentageExploded < 10) {
+                $suggestions .= 'тільки ';
+            }
             $suggestions .= $percentageExploded . '% матеріалу ділення. ';
             if ($percentageExploded < 10 && $bombCalcModel->temperMaterial == Constants::$TEMPER_MATERIAL['None']) {
-                $minimalMass = $this->calculatePurityTask->run($bombCalcModel->coreMaterial, Constants::$TEMPER_MATERIAL['Beryllium'], $bombCalcModel->purity);
-                $suggestions .= 'Система радить Вам використовувати темпер з Урану-235 чи краще Берілію<br>Зрибивши це ви використаєте на ' . (1 - ($minimalMass / $bombCalcModel->amountMaterial)) * 100 . '% зменшете массу речовини (до ' . number_format($minimalMass, 3) . ' кг)<br>';
+                $minimalMass = max($this->calculatePurityTask->run($bombCalcModel->coreMaterial, Constants::$TEMPER_MATERIAL['Beryllium'], $bombCalcModel->purity) * 1000, $bombCalcModel->materialReacted);
+                $suggestions .= 'Система радить Вам використовувати темпер з Урану-235 чи краще Берілію<br>Зрибивши це ви використаєте на ' . number_format((1 - $minimalMass / ($bombCalcModel->amountMaterial * 1000)) * 100, 4) . '% та зменшете массу речовини (до ';
+                $suggestions .= $minimalMass > 1000 ? number_format(($minimalMass / 1000), 3) . ' кг )<br>' : (number_format($minimalMass, 3) . ' грам )<br>');
+
             }
 
             if ($percentageExploded < 1) {
@@ -44,8 +47,8 @@ class CreateSuggestionsTask
 
             if ($percentageExploded > 50) {
                 if ($bombCalcModel->temperMaterial == Constants::$TEMPER_MATERIAL['None']) {
-                    $minimalMass = max($this->calculatePurityTask->run($bombCalcModel->coreMaterial, Constants::$TEMPER_MATERIAL['Beryllium'], $bombCalcModel->purity), $bombCalcModel->materialReacted);
-                    $suggestions .= 'Система радить Вам використовувати темпер з Урану-235 чи краще Берілію<br>Зробивши це ви використаєте на ' . (1 - ($minimalMass / $bombCalcModel->amountMaterial)) * 100 . '% зменшете массу речовини (до ' . number_format($minimalMass, 3) . ' кг)<br>';
+                    $minimalMass = max($this->calculatePurityTask->run($bombCalcModel->coreMaterial, Constants::$TEMPER_MATERIAL['Beryllium'], $bombCalcModel->purity) * 1000, $bombCalcModel->materialReacted);
+                    $suggestions .= 'Система радить Вам використовувати темпер з Урану-235 чи краще Берілію<br>Зробивши це ви використаєте на ' . number_format((1 - ($minimalMass / $bombCalcModel->amountMaterial)) * 100, 4) . '% та зменшете массу речовини (до ' . number_format($minimalMass, 3) . ' кг)<br>';
                 }
 
                 $suggestions .= 'Це вже не погано але ви можете збільшити кількість нейтронів на один-два порядки, щоб пришвидчити реакцію';

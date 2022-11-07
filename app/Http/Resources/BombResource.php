@@ -12,8 +12,12 @@ class BombResource extends JsonResource
      *///Todo DIMON Проверить и доделать ресурс, если оно не будет работать
     public function toArray($request): array
     {
+        $power = number_format($this->yield, 2);
+        if ($power<0.1){
+            $power = 'Выбуху не було';
+        }
         return [
-            'yield' => number_format($this->yield, 2),
+            'yield' => $power,
             'materialReacted' => number_format($this->materialReacted, 2),
             'explanations' => $this->explanations,
             'suggestions' => $this->suggestions,
