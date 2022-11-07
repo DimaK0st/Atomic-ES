@@ -10,9 +10,9 @@ class GetExplosionExampleTask
     {
     }
 
-    public function run(int $minPower, int $maxPower): array
+    public function run(float $yield): array
     {
-        $examplesList = $this->exampleRepository->getExamplesByClassification($minPower, $maxPower);
+        $examplesList = $this->exampleRepository->getExamplesByYield($yield);
 
         foreach ($examplesList as $key=>$item){
             $examplesList[$key]['url'] = asset('images/' . $item['url']);

@@ -20,10 +20,7 @@ class GetDatabaseDataAction
         }
 
         $bombCalcModel->setAdditionalParameters($explosionClassification);
-        $bombCalcModel->examplesList = $this->explosionExampleTask->run(
-            $explosionClassification->min_power,
-            $explosionClassification->max_power,
-        );
+        $bombCalcModel->examplesList = $this->explosionExampleTask->run($bombCalcModel->yield);
 
         return $bombCalcModel;
     }
