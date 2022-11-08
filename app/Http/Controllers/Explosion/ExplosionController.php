@@ -26,7 +26,9 @@ class ExplosionController extends BaseController
         $explosionDTO = ExplosionDTO::fromRequestData($request);
         $validation = $validateExplosionData->run($explosionDTO);
         if ($validation != 'valid') {
-            return $validation;
+            return response()->json([
+                $validation
+            ], 409); // Status
         }
         $bombCalcModel = $calculateExplosionAction->run($explosionDTO);
         if (!$bombCalcModel = $getDatabaseDataAction->run($bombCalcModel)) {
