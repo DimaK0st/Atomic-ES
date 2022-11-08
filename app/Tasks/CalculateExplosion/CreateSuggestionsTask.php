@@ -41,7 +41,7 @@ class CreateSuggestionsTask
                 $tmpBombCalcModel->numberOfNeutrons *= 1000;
                 $tmpBombCalcModel = $this->calculatePowerTask->run($tmpBombCalcModel);
                 $suggestions .= 'Система також радить Вам використовувати більше нейтроних випромінювачей, тому що саме це стало основною проблемою у вашій ситуації<br>Якщо ви збільшете це число у 1000 разів, то вибух вже матиме потужність у ' . number_format($tmpBombCalcModel->yield, 3) . ' кт та таким чином прореагує вже ';
-                $suggestions .= $tmpBombCalcModel->materialReacted > 1000 ? ($tmpBombCalcModel->materialReacted / 1000) . ' кг ' : (number_format($tmpBombCalcModel->materialReacted, 2) . ' грам ');
+                $suggestions .= $tmpBombCalcModel->materialReacted > 1000 ? number_format(($tmpBombCalcModel->materialReacted / 1000), 3) . ' кг ' : number_format(($tmpBombCalcModel->materialReacted), 3) . ' грам ';
                 $suggestions .= $word1 . '<br>';
             }
 
