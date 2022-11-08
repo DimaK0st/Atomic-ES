@@ -26,9 +26,7 @@ class ExplosionController extends BaseController
         $explosionDTO = ExplosionDTO::fromRequestData($request);
         $validation = $validateExplosionData->run($explosionDTO);
         if ($validation != 'valid') {
-            return response()->json([
-                $validation
-            ], 409); // Status
+            abort(response()->json($validation, 400) );
         }
         $bombCalcModel = $calculateExplosionAction->run($explosionDTO);
         if (!$bombCalcModel = $getDatabaseDataAction->run($bombCalcModel)) {
@@ -37,9 +35,3 @@ class ExplosionController extends BaseController
         return BombResource::make($bombCalcModel);
     }
 }
-
-
-//        $examplesAction->run(ExplosionDTO::fromRequestData($request));
-//        $kiloTon = $this->explosionService->calculateExplosion($request);
-//        $classificationModel = $this->classificationService->getClassificationByKiloTon($kiloTon);
-//        $exampleList = $this->exampleService->getExamplesByClassification($classificationModel);
